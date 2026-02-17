@@ -1,270 +1,270 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hadiah Pasaran Togel</title>
-  <style>
-    :root { 
-      --gold: #ffcc00; 
-      --gold-bright: #fff000;
-      --gold-deep: #d4af37;
-      --red-luxury: linear-gradient(145deg, #b00000, #5a0000); 
-      --dark: #0d0000; 
-      --gold-glow: rgba(255, 204, 0, 0.6); 
-    }
-    
-    body { 
-      background: var(--dark); 
-      color: white; 
-      font-family: 'Segoe UI', Tahoma, sans-serif; 
-      padding: 20px; 
-      margin: 0; 
-      font-weight: 800; 
-    }
-    
-    .container { max-width: 1200px; margin: 0 auto; text-align: center; }
-    
-    .header-pasaran {
-      font-size: 2.5em; 
-      font-weight: 900; 
-      color: var(--gold);
-      text-transform: uppercase; 
-      margin-bottom: 20px; 
-      text-shadow: 2px 2px 0px #000, 0 0 15px var(--gold-glow);
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Hadiah Pasaran</title>
+    <style>
+        :root { 
+            --gold: #ffcc00; 
+            --gold-bright: #fff000;
+            --gold-deep: #d4af37;
+            --red-luxury: linear-gradient(145deg, #b00000, #5a0000); 
+            --dark: #0d0000; 
+            --gold-glow: rgba(255, 204, 0, 0.6); 
+        }
+        
+        body { 
+            background: var(--dark); 
+            color: white; 
+            font-family: 'Segoe UI', Tahoma, sans-serif; 
+            padding: 20px; 
+            margin: 0; 
+            font-weight: 800; 
+        }
+        
+        .container { max-width: 1200px; margin: 0 auto; text-align: center; }
+        
+        .header-pasaran {
+            font-size: 2.5em; 
+            font-weight: 900; 
+            color: var(--gold);
+            text-transform: uppercase; 
+            margin-bottom: 20px; 
+            text-shadow: 2px 2px 0px #000, 0 0 15px var(--gold-glow);
+        }
 
-    .search-wrapper { margin-bottom: 30px; position: relative; max-width: 500px; margin-left: auto; margin-right: auto; }
-    
-    select { 
-      width: 100%; padding: 15px; border-radius: 12px; 
-      font-weight: 900; 
-      font-size: 1.2em; 
-      background: white; border: 4px solid var(--gold); cursor: pointer;
-      color: #000;
-      box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
-    }
+        .search-wrapper { margin-bottom: 30px; position: relative; max-width: 500px; margin-left: auto; margin-right: auto; }
+        
+        select { 
+            width: 100%; padding: 15px; border-radius: 12px; 
+            font-weight: 900; 
+            font-size: 1.2em; 
+            background: white; border: 4px solid var(--gold); cursor: pointer;
+            color: #000;
+            box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+        }
 
-    .betting-grid { 
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-      gap: 20px; margin-top: 20px;
-    }
+        .betting-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 20px; margin-top: 20px;
+        }
 
-    @media (min-width: 992px) { .betting-grid { grid-template-columns: repeat(3, 1fr); } }
+        @media (min-width: 992px) { .betting-grid { grid-template-columns: repeat(3, 1fr); } }
 
-    .card { 
-      background: var(--red-luxury); 
-      border: 3px solid var(--gold); border-radius: 15px; 
-      padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-      transition: 0.3s;
-      display: flex;
-      flex-direction: column;
-    }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 0 20px var(--gold-glow); }
+        .card { 
+            background: var(--red-luxury); 
+            border: 3px solid var(--gold); border-radius: 15px; 
+            padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 0 20px var(--gold-glow); }
 
-    .section-title { 
-      color: var(--gold); 
-      font-weight: 900; 
-      font-size: clamp(1.1em, 4vw, 1.6em); 
-      margin-bottom: 8px; 
-      text-shadow: 2px 2px 4px black;
-      text-transform: uppercase;
-      line-height: 1.2;
-      min-height: 2.4em; 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+        .section-title { 
+            color: var(--gold); 
+            font-weight: 900; 
+            font-size: clamp(1.1em, 4vw, 1.6em); 
+            margin-bottom: 8px; 
+            text-shadow: 2px 2px 4px black;
+            text-transform: uppercase;
+            line-height: 1.2;
+            min-height: 2.4em; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .info-text { 
-      font-size: 1.1em; 
-      font-weight: 800; 
-      margin-bottom: 15px; 
-      border-bottom: 2px dashed rgba(255,204,0,0.5); 
-      padding-bottom: 8px; 
-      color: #fff;
-    }
-    
-    input { 
-      width: 100%; padding: 12px; box-sizing: border-box; border-radius: 8px; border: none;
-      text-align: center; font-size: 1.4em; margin-bottom: 10px; font-weight: 900; color: #000;
-      box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
-    }
-    
-    button { 
-      width: 100%; padding: 12px; border-radius: 8px; border: none; 
-      font-weight: 900; 
-      cursor: pointer; 
-      background: linear-gradient(to bottom, #ffe066, #ffcc00, #b38f00); 
-      color: #331a00; 
-      font-size: 1.3em; 
-      transition: 0.2s;
-      text-transform: uppercase;
-      box-shadow: 0 4px 0 #806600, 0 5px 10px rgba(0,0,0,0.5);
-      text-shadow: 0.5px 0.5px 0px rgba(255,255,255,0.5);
-    }
-    button:hover { background: linear-gradient(to bottom, #fff000, #ffcc00, #d4af37); transform: translateY(-2px); }
-    button:active { transform: translateY(2px); box-shadow: 0 1px 0 #806600; }
+        .info-text { 
+            font-size: 1.1em; 
+            font-weight: 800; 
+            margin-bottom: 15px; 
+            border-bottom: 2px dashed rgba(255,204,0,0.5); 
+            padding-bottom: 8px; 
+            color: #fff;
+        }
+        
+        input { 
+            width: 100%; padding: 12px; box-sizing: border-box; border-radius: 8px; border: none;
+            text-align: center; font-size: 1.4em; margin-bottom: 10px; font-weight: 900; color: #000;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        button { 
+            width: 100%; padding: 12px; border-radius: 8px; border: none; 
+            font-weight: 900; 
+            cursor: pointer; 
+            background: linear-gradient(to bottom, #ffe066, #ffcc00, #b38f00); 
+            color: #331a00; 
+            font-size: 1.3em; 
+            transition: 0.2s;
+            text-transform: uppercase;
+            box-shadow: 0 4px 0 #806600, 0 5px 10px rgba(0,0,0,0.5);
+            text-shadow: 0.5px 0.5px 0px rgba(255,255,255,0.5);
+        }
+        button:hover { background: linear-gradient(to bottom, #fff000, #ffcc00, #d4af37); transform: translateY(-2px); }
+        button:active { transform: translateY(2px); box-shadow: 0 1px 0 #806600; }
 
-    .res-box { 
-      background: rgba(0,0,0,0.6); 
-      padding: 10px; 
-      border-radius: 8px; 
-      margin-top: 8px; 
-      display: flex; 
-      justify-content: center; 
-      align-items: center;
-      border: 2px solid rgba(255,204,0,0.4);
-      font-size: 1.1em;
-      gap: 10px;
-    }
+        .res-box { 
+            background: rgba(0,0,0,0.6); 
+            padding: 10px; 
+            border-radius: 8px; 
+            margin-top: 8px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            border: 2px solid rgba(255,204,0,0.4);
+            font-size: 1.1em;
+            gap: 10px;
+        }
 
-    .val { 
-      color: var(--gold-bright); 
-      font-weight: 900; 
-      font-size: 1.5em; 
-      text-shadow: 2px 2px 3px black;
-    }
+        .val { 
+            color: var(--gold-bright); 
+            font-weight: 900; 
+            font-size: 1.5em; 
+            text-shadow: 2px 2px 3px black;
+        }
 
-    #pasaranTitle {
-      font-size: 1.8em; 
-      font-weight: 900;
-      color: var(--gold-bright);
-      display: inline-block; 
-      padding: 10px 30px;
-      margin-top: 10px;
-      text-shadow: 2px 2px 10px rgba(0,0,0,1);
-    }
+        #pasaranTitle {
+            font-size: 1.8em; 
+            font-weight: 900;
+            color: var(--gold-bright);
+            display: inline-block; 
+            padding: 10px 30px;
+            margin-top: 10px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,1);
+        }
 
-    .loader { 
-      display: none; margin: 30px auto; 
-      border: 8px solid #333; 
-      border-top: 8px solid var(--gold); 
-      border-radius: 50%; width: 60px; height: 60px; 
-      animation: spin 1s linear infinite; 
-    }
-    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-  </style>
+        .loader { 
+            display: none; margin: 30px auto; 
+            border: 8px solid #333; 
+            border-top: 8px solid var(--gold); 
+            border-radius: 50%; width: 60px; height: 60px; 
+            animation: spin 1s linear infinite; 
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
 </head>
 <body>
 
 <div class="container">
-  <div class="header-pasaran">HADIAH PASARAN TOGEL</div>
+    <div class="header-pasaran">HADIAH PASARAN TOGEL</div>
 
-  <div class="search-wrapper">
-    <select id="selPasaran" onchange="loadData()">
-      <option value="">-- PILIH PASARAN --</option>
-      <option value="BANGKOK">BANGKOK</option>
-      <option value="BRUNEI">BRUNEI</option>
-      <option value="CHELSEA">CHELSEA</option>
-      <option value="HONGKONG">HONGKONG</option>
-      <option value="HUAHIN">HUAHIN</option>
-      <option value="MAGNUM4D">MAGNUM4D</option>
-      <option value="NEVADA">NEVADA</option>
-      <option value="POIPET">POIPET</option>
-      <option value="SYDNEY">SYDNEY</option>
-      <option value="SINGAPORE">SINGAPORE</option>
-      <option value="TOTOMALI">TOTOMALI</option>
-      <option value="TOTOMACAU 5D">TOTOMACAU 5D</option>
-      <option value="TOTOMACAU 4D">TOTOMACAU 4D</option>
-      <option value="BULLEYE">BULLEYE</option>
-      <option value="CALIFORNIA">CALIFORNIA</option>
-      <option value="CAROLINA EVE">CAROLINA EVE</option>
-      <option value="CAROLINA DAY">CAROLINA DAY</option>
-      <option value="FLORIDA EVE">FLORIDA EVE</option>
-      <option value="FLORIDA MID">FLORIDA MID</option>
-      <option value="KENTUKY EVE">KENTUKY EVE</option>
-      <option value="KENTUKY MID">KENTUKY MID</option>
-      <option value="NEW YORK MID">NEW YORK MID</option>
-      <option value="NEW YORK EVE">NEW YORK EVE</option>
-      <option value="OREGON">OREGON</option>
-      <option value="PCSO">PCSO</option>
-      <option value="HOKI DRAW">HOKI DRAW</option>
-      <option value="JAKARTA">JAKARTA</option>
-    </select>
-  </div>
+    <div class="search-wrapper">
+        <select id="selPasaran" onchange="loadData()">
+            <option value="">-- PILIH PASARAN --</option>
+            <option value="BANGKOK">BANGKOK</option>
+            <option value="BRUNEI">BRUNEI</option>
+            <option value="CHELSEA">CHELSEA</option>
+            <option value="HONGKONG">HONGKONG</option>
+            <option value="HUAHIN">HUAHIN</option>
+            <option value="MAGNUM4D">MAGNUM4D</option>
+            <option value="NEVADA">NEVADA</option>
+            <option value="POIPET">POIPET</option>
+            <option value="SYDNEY">SYDNEY</option>
+            <option value="SINGAPORE">SINGAPORE</option>
+            <option value="TOTOMALI">TOTOMALI</option>
+            <option value="TOTOMACAU 5D">TOTOMACAU 5D</option>
+            <option value="TOTOMACAU 4D">TOTOMACAU 4D</option>
+            <option value="BULLEYE">BULLEYE</option>
+            <option value="CALIFORNIA">CALIFORNIA</option>
+            <option value="CAROLINA EVE">CAROLINA EVE</option>
+            <option value="CAROLINA DAY">CAROLINA DAY</option>
+            <option value="FLORIDA EVE">FLORIDA EVE</option>
+            <option value="FLORIDA MID">FLORIDA MID</option>
+            <option value="KENTUKY EVE">KENTUKY EVE</option>
+            <option value="KENTUKY MID">KENTUKY MID</option>
+            <option value="NEW YORK MID">NEW YORK MID</option>
+            <option value="NEW YORK EVE">NEW YORK EVE</option>
+            <option value="OREGON">OREGON</option>
+            <option value="PCSO">PCSO</option>
+            <option value="HOKI DRAW">HOKI DRAW</option>
+            <option value="JAKARTA">JAKARTA</option>
+        </select>
+    </div>
 
-  <div id="loader" class="loader"></div>
-  <div id="pasaranTitle"></div>
-  <div id="content" class="betting-grid"></div>
+    <div id="loader" class="loader"></div>
+    <div id="pasaranTitle"></div>
+    <div id="content" class="betting-grid"></div>
 </div>
 
 <script>
-  // GANTI LINK DI BAWAH INI DENGAN URL WEB APP ANDA
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx7q_nIYYr9RknnJRyhKmXFzP7lD_iYuWpW8aAL3iDAgTgK7NIPuCPr8pkJ5rb1p5tG/exec";
+    // URL SCRIPT VERSI 45
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby2YbTeaveaEctr4NolwcS9rRlVmqPdcHH2cH5s5d2w2IYSSVrlu7eLkJdZ0RCgtDwu6Q/exec";
 
-  function formatTitik(angka) {
-    if (!angka || angka === "0") return "0";
-    return angka.toString().replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-  }
-
-  function toggleLoader(show) {
-    document.getElementById('loader').style.display = show ? 'block' : 'none';
-  }
-
-  async function loadData() {
-    const p = document.getElementById('selPasaran').value;
-    document.getElementById('content').innerHTML = "";
-    document.getElementById('pasaranTitle').innerText = "";
-    if(!p) { toggleLoader(false); return; }
-    
-    toggleLoader(true);
-    
-    try {
-      const response = await fetch(`${SCRIPT_URL}?action=getSemuaDataPasaran&pasaran=${p}`);
-      const res = await response.json();
-      render(res);
-    } catch (err) {
-      toggleLoader(false);
-      alert("Error Koneksi: " + err);
+    function formatTitik(angka) {
+        if (!angka || angka === "0") return "0";
+        return angka.toString().replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ".");
     }
-  }
 
-  function render(res) {
-    toggleLoader(false);
-    if(res.error) { alert(res.error); return; }
-    document.getElementById('pasaranTitle').innerText = res.nama;
-    let html = "";
-    res.dataRaw.forEach(item => {
-      html += `
-        <div class="card">
-          <div class="section-title">${item.label}</div>
-          <div class="info-text">${item.info}</div>
-          <input type="number" id="nom_${item.inputRow}" placeholder="INPUT NOMINAL" onkeydown="if(event.key==='Enter') kirim(${res.col}, ${item.inputRow})">
-          <button onclick="kirim(${res.col}, ${item.inputRow})">HITUNG</button>
-          <div class="res-box"><span>BAYAR :</span><span id="p_${item.inputRow}" class="val">0</span></div>
-          <div class="res-box"><span>TOTAL MENANG :</span><span id="w_${item.inputRow}" class="val">0</span></div>
-        </div>`;
-    });
-    document.getElementById('content').innerHTML = html;
-  }
-
-  async function kirim(col, row) {
-    const val = document.getElementById('nom_'+row).value;
-    if(!val) return alert("Masukkan Nominal!");
-    
-    document.getElementById('p_'+row).innerText = "...";
-    document.getElementById('w_'+row).innerText = "...";
-    
-    try {
-      const response = await fetch(`${SCRIPT_URL}?action=inputKeSpreadsheet&col=${col}&row=${row}&val=${val}`);
-      const res = await response.json();
-      
-      if(res.status === "Sukses!") {
-        document.getElementById('p_'+row).innerText = formatTitik(res.bayar);
-        document.getElementById('w_'+row).innerText = formatTitik(res.menang);
-      } else { 
-        alert(res.status); 
-        document.getElementById('p_'+row).innerText = "0";
-        document.getElementById('w_'+row).innerText = "0";
-      }
-    } catch (err) {
-      alert("Gagal mengirim data: " + err);
-      document.getElementById('p_'+row).innerText = "0";
-      document.getElementById('w_'+row).innerText = "0";
+    function toggleLoader(show) {
+        document.getElementById('loader').style.display = show ? 'block' : 'none';
     }
-  }
+
+    async function loadData() {
+        const p = document.getElementById('selPasaran').value;
+        document.getElementById('content').innerHTML = "";
+        document.getElementById('pasaranTitle').innerText = "";
+        if(!p) { toggleLoader(false); return; }
+        
+        toggleLoader(true);
+        
+        try {
+            const response = await fetch(`${SCRIPT_URL}?action=getSemuaDataPasaran&pasaran=${encodeURIComponent(p)}`);
+            const res = await response.json();
+            render(res);
+        } catch (err) {
+            toggleLoader(false);
+            console.error(err);
+            alert("Error: Pastikan izin Google Script sudah 'Anyone' dan fungsi doGet sudah ada.");
+        }
+    }
+
+    function render(res) {
+        toggleLoader(false);
+        if(res.error) { alert(res.error); return; }
+        document.getElementById('pasaranTitle').innerText = res.nama;
+        let html = "";
+        res.dataRaw.forEach(item => {
+            html += `
+                <div class="card">
+                    <div class="section-title">${item.label}</div>
+                    <div class="info-text">${item.info}</div>
+                    <input type="number" id="nom_${item.inputRow}" placeholder="INPUT NOMINAL" onkeydown="if(event.key==='Enter') kirim(${res.col}, ${item.inputRow})">
+                    <button onclick="kirim(${res.col}, ${item.inputRow})">HITUNG</button>
+                    <div class="res-box"><span>BAYAR :</span><span id="p_${item.inputRow}" class="val">0</span></div>
+                    <div class="res-box"><span>TOTAL MENANG :</span><span id="w_${item.inputRow}" class="val">0</span></div>
+                </div>`;
+        });
+        document.getElementById('content').innerHTML = html;
+    }
+
+    async function kirim(col, row) {
+        const val = document.getElementById('nom_'+row).value;
+        if(!val) return alert("Masukkan Nominal!");
+        
+        document.getElementById('p_'+row).innerText = "...";
+        document.getElementById('w_'+row).innerText = "...";
+        
+        try {
+            const response = await fetch(`${SCRIPT_URL}?action=inputKeSpreadsheet&col=${col}&row=${row}&val=${val}`);
+            const res = await response.json();
+            
+            if(res.status === "Sukses!") {
+                document.getElementById('p_'+row).innerText = formatTitik(res.bayar);
+                document.getElementById('w_'+row).innerText = formatTitik(res.menang);
+            } else { 
+                alert(res.status); 
+                document.getElementById('p_'+row).innerText = "0";
+                document.getElementById('w_'+row).innerText = "0";
+            }
+        } catch (err) {
+            console.error(err);
+            alert("Gagal terhubung ke sistem.");
+        }
+    }
 </script>
 </body>
 </html>
